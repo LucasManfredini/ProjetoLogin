@@ -27,7 +27,7 @@ export default function CadastrarFuncionario() {
     email: '',
     dtNascimento: '',
     dataAdmissao: '',
-    status: 'admitido'  
+    status: 'Admitido'  
   });
 
   const router = useRouter();

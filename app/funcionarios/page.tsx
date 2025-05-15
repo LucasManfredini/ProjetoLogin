@@ -105,7 +105,8 @@ export default function Login() {
                                 <strong> CPF:</strong> {funcionario.cpf} -
                                 <strong> E-MAIL:</strong> {funcionario.email}
                                 <strong> NASCIMENTO:</strong> {funcionario.dtNascimento} -
-                                <strong> ADIMISSÃO:</strong> {funcionario.cpf}
+                                <strong> ADIMISSÃO:</strong> {funcionario.dataAdmissao}
+                                <strong> Status:</strong> {funcionario.status}
                             </li>
                         );
                     })

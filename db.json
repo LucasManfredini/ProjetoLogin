@@ -37,7 +37,7 @@
       "email": "carlos@email.com",
       "dtNascimento": "1988-07-07",
       "dataAdmissao": "2019-08-20",
-      "status": "Admitido"
+      "status": "Demitido"
     },
     {
       "id": "0",
@@ -46,7 +46,7 @@
       "email": "lucas@hot",
       "dtNascimento": "2000-05-01",
       "dataAdmissao": "2006-11-17",
-      "status": "admitido"
+      "status": "Demitido"
     },
     {
       "id": "004d",
