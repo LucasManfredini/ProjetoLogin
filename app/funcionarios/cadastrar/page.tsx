@@ -12,8 +12,10 @@ import { useState } from 'react';
 /* Estrutura do novo usuário */
 interface Funcionario {
   nome: string;
-  usuario: string;
-  senha: string;
+  cpf: string;
+  email: string;
+  dtNascimento: string;
+  dataAdmissao: string;
   status: string;
 }
 
@@ -21,9 +23,11 @@ interface Funcionario {
 export default function CadastrarFuncionario() {
   const [novoFuncionario, setNovoFuncionario] = useState<Funcionario>({
     nome: '',
-    usuario: '',
-    senha: '',
-    status: 'admitido'
+    cpf: '',
+    email: '',
+    dtNascimento: '',
+    dataAdmissao: '',
+    status: 'admitido'  
   });
 
   const router = useRouter();
@@ -80,8 +84,10 @@ export default function CadastrarFuncionario() {
               onChange={function (evento) {
                 setNovoFuncionario({
                   nome: evento.target.value,
-                  usuario: novoFuncionario.usuario,
-                  senha: novoFuncionario.senha,
+                  cpf: novoFuncionario.cpf,
+                  email: novoFuncionario.email,
+                  dtNascimento: novoFuncionario.dtNascimento,
+                  dataAdmissao: novoFuncionario.dataAdmissao,
                   status: novoFuncionario.status
                 });
               }}
@@ -89,19 +95,21 @@ export default function CadastrarFuncionario() {
             />
           </div>
 
-          {/* Campo: Funcionario */}
+          {/* Campo: CPF */}
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <label htmlFor="campoFuncionario">Funcionario de acesso:</label>
+            <label htmlFor="campoCpf">CPF:</label>
             <input
-              id="campoFuncionario"
+              id="campoCpf"
               type="text"
-              placeholder="Digite o Funcionario"
-              value={novoFuncionario.usuario}
+              placeholder="Digite o CPF"
+              value={novoFuncionario.cpf}
               onChange={function (evento) {
                 setNovoFuncionario({
                   nome: novoFuncionario.nome,
-                  usuario: evento.target.value,
-                  senha: novoFuncionario.senha,
+                  cpf: evento.target.value,
+                  email: novoFuncionario.email,
+                  dtNascimento: novoFuncionario.dtNascimento,
+                  dataAdmissao: novoFuncionario.dataAdmissao,
                   status: novoFuncionario.status
                 });
               }}
@@ -109,25 +117,72 @@ export default function CadastrarFuncionario() {
             />
           </div>
 
-          {/* Campo: Senha */}
+          {/* Campo: Email */}
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <label htmlFor="campoSenha">Senha:</label>
+            <label htmlFor="campoEmail">Email:</label>
             <input
-              id="campoSenha"
-              type="password"
-              placeholder="Digite a senha"
-              value={novoFuncionario.senha}
+              id="campoEmail"
+              type="email"
+              placeholder="Digite o email"
+              value={novoFuncionario.email}
               onChange={function (evento) {
                 setNovoFuncionario({
                   nome: novoFuncionario.nome,
-                  usuario: novoFuncionario.usuario,
-                  senha: evento.target.value,
+                  cpf: novoFuncionario.cpf,
+                  email: evento.target.value,
+                  dtNascimento: novoFuncionario.dtNascimento,
+                  dataAdmissao: novoFuncionario.dataAdmissao,
                   status: novoFuncionario.status
                 });
               }}
               style={{ padding: "8px", borderRadius: "5px", border: "1px solid #ccc" }}
             />
           </div>
+
+          {/* Campo: Nascimento */}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <label htmlFor="campoDtnascimento">Nascimento:</label>
+            <input
+              id="campoDtnascimento"
+              type="date"
+              placeholder="Digite a data de nascimento"
+              value={novoFuncionario.dtNascimento}
+              onChange={function (evento) {
+                setNovoFuncionario({
+                  nome: novoFuncionario.nome,
+                  cpf: novoFuncionario.cpf,
+                  email: novoFuncionario.email,
+                  dtNascimento: evento.target.value,
+                  dataAdmissao: novoFuncionario.dataAdmissao,
+                  status: novoFuncionario.status
+                });
+              }}
+              style={{ padding: "8px", borderRadius: "5px", border: "1px solid #ccc" }}
+            />
+          </div>
+
+          {/* Campo: Admissão */}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <label htmlFor="campoDtAdmissao">Admissão:</label>
+            <input
+              id="campoDtAdmissao"
+              type="date"
+              placeholder="Digite a data de Admissão"
+              value={novoFuncionario.dataAdmissao}
+              onChange={function (evento) {
+                setNovoFuncionario({
+                  nome: novoFuncionario.nome,
+                  cpf: novoFuncionario.cpf,
+                  email: novoFuncionario.email,
+                  dtNascimento: novoFuncionario.dtNascimento,
+                  dataAdmissao: evento.target.value,
+                  status: novoFuncionario.status
+                });
+              }}
+              style={{ padding: "8px", borderRadius: "5px", border: "1px solid #ccc" }}
+            />
+          </div>
+          
 
           {/* Status atual */}
           <div>

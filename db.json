@@ -1,0 +1,52 @@
+{
+  "login": [
+    {
+      "id": "6e98",
+      "nome": "Ana Vitoria",
+      "usuario": "Ana",
+      "senha": "123456",
+      "status": "ativo"
+    },
+    {
+      "id": "a440",
+      "nome": "Fulano de Tal",
+      "usuario": "fulano",
+      "senha": "123456",
+      "status": "inativo"
+    },
+    {
+      "id": "4f6a",
+      "nome": "Lucas Vaz",
+      "usuario": "lucas.vaz",
+      "senha": "123456",
+      "status": "ativo"
+    },
+    {
+      "id": "4a8f",
+      "nome": "gfhjdfjg",
+      "usuario": "gfhjdfgh",
+      "senha": "gjhgdjhgk",
+      "status": "ativo"
+    }
+  ],
+  "funcionarios": [
+    {
+      "id": "3",
+      "nome": "Carlos Eduardo",
+      "cpf": "741.852.963-44",
+      "email": "carlos@email.com",
+      "dtNascimento": "1988-07-07",
+      "dataAdmissao": "2019-08-20",
+      "status": "Admitido"
+    },
+    {
+      "id": "0",
+      "nome": "Lucas Batista",
+      "cpf": "402234868-25",
+      "email": "lucas@hot",
+      "dtNascimento": "2000-05-01",
+      "dataAdmissao": "2006-11-17",
+      "status": "admitido"
+    }
+  ]
+}
