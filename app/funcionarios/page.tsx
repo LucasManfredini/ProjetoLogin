@@ -18,13 +18,7 @@ Aqui definimos como é um "usuário" dentro do sistema.
 É como se a gente desenhasse o formato de uma ficha:
 - Cada usuário terá: id, nome, usuario, senha e status.
 */
-interface Usuario {
-    id: number;
-    nome: string;
-    usuario: string;
-    senha: string;
-    status: string;
-}
+import Funcionario from "./interface/interface";
 
 /* 
 Essa função é o nosso componente de página.
@@ -36,7 +30,7 @@ export default function Login() {
     Aqui criamos uma caixinha (estado) chamada usuarios.
     Começamos ela vazia ([]), mas depois vamos encher com os dados que vierem do servidor.
     */
-    const [usuarios, setUsuarios] = useState<Usuario[]>([]);
+    const [funcionarios, setUsuarios] = useState<Funcionario[]>([]);
 
     /* 
     useRouter é o nosso motorista: ele leva o usuário para outra tela quando mandarmos.
@@ -83,20 +77,20 @@ export default function Login() {
             */}
             <ul>
                 {
-                    usuarios.map(function (usuario) {
+                    funcionarios.map(function (funcionario) {
                         /* 
                         Para cada usuário encontrado, criamos um item na lista.
                         E deixamos ele clicável: se clicar, vamos para a tela de edição daquele usuário.
                         */
                         return (
                             <li
-                                key={usuario.id} /* Importante: cada item precisa de uma chave única */
+                                key={funcionario.id} /* Importante: cada item precisa de uma chave única */
                                 onClick={function () {
                                     /* 
                                     Quando o usuário clicar no nome, levamos ele para a página específica.
                                     Exemplo: se o ID for 3, vamos para /login/3
                                     */
-                                    router.push(`/funcionarios/${usuario.id}`);
+                                    router.push(`/funcionarios/${funcionario.id}`);
                                 }}
                                 style={{
                                     border: "1px solid black",
@@ -107,9 +101,11 @@ export default function Login() {
                                 }}
                             >
                                 {/* Mostramos as informações do usuário */}
-                                <strong>NOME:</strong> {usuario.nome} -
-                                <strong> USUÁRIO:</strong> {usuario.usuario} -
-                                <strong> STATUS:</strong> {usuario.status}
+                                <strong>NOME:</strong> {funcionario.nome} -
+                                <strong> CPF:</strong> {funcionario.cpf} -
+                                <strong> E-MAIL:</strong> {funcionario.email}
+                                <strong> NASCIMENTO:</strong> {funcionario.dtNascimento} -
+                                <strong> ADIMISSÃO:</strong> {funcionario.cpf}
                             </li>
                         );
                     })

@@ -47,6 +47,15 @@
       "dtNascimento": "2000-05-01",
       "dataAdmissao": "2006-11-17",
       "status": "admitido"
+    },
+    {
+      "id": "004d",
+      "nome": "luan silva",
+      "cpf": "4568461648",
+      "email": "df@lkglk'",
+      "dtNascimento": "1996-05-04",
+      "dataAdmissao": "2015-12-15",
+      "status": "admitido"
     }
   ]
 }
