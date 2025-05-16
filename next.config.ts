@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   },
   typescript:{
     ignoreBuildErros: true,
-  }
+  },
 };
 
 export default nextConfig;
